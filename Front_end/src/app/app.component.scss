@@ -1,0 +1,168 @@
+//--------corps----
+    .container {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo-shopinsid {
+        width: 200px;
+        height: 70px;
+        cursor: pointer;
+        background: url(../assets/interface/shopinsid.png) center no-repeat;
+        background-size: 100%;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .logo-shopinsid:hover {
+        background: url(../assets/interface/shopinsidHover.png) center no-repeat;
+        background-size: 100%;
+    }
+
+    .select {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .catego{
+        border: 0px;
+        cursor: pointer;
+    }
+
+    .option:first-child {
+        font-weight: bold;
+    }
+
+    .option {
+        display: inline;
+        padding: 15px;
+    }
+
+    .option:hover {
+        border-radius: 10px;
+    }
+    
+    /* Styles pour la barre de menu */
+    .menu-bar {
+        background-color: none;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .search {
+        border-top: none;
+        border-left: none;
+        border-right:none;
+        border-bottom:none;
+        padding-left: 10px;
+    }
+    
+    .menu-items li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .menu-items li:last-child {
+        margin-right: 0;
+    }
+    
+    .menu-items a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .panier-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .panier-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+    }
+    
+    //Style pour la barre de suggestion de recherche
+    .suggestions {
+        position: absolute;
+        border: 5px solid;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1;
+        width: 20%;
+        font-weight: bold;
+    }
+    
+    .suggestions ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .suggestions li {
+        padding: 10px;
+    cursor: pointer;
+    }
+    
+    .profil-button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .label-menu {
+        font-size: 12px;
+    }
+    
+//--------footer----    
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .bg-transp{
+        background-color: none;
+    }
+
+    .partager{
+        border: 0;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 5px;
+        z-index: 1;
+    }
+
+    .socialNet {
+        list-style: none; 
+        position: absolute;
+        bottom: 45px;
+        left: 37%;
+    }
+
+    .socialNet ul {
+        margin-bottom: 0;
+    }
+
+    .closeNetwork {
+        position: absolute;
+        bottom: 45px;
+        left: 5px;
+    }

@@ -1,0 +1,770 @@
+//-------geenrique----
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+    text-underline-offset: 5px;
+  }
+
+//---------------------scrollbar--------------
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+//---------------------variable de couleur------
+
+$red-shopinsid: #d81159;
+$orange-shopinsid: #ffbc42;
+$black-shopinsid: black;
+$white-shopinsid: white;
+$gray-shopinsid: gray;
+$lgtgray-shopinsid: lightgrey;
+
+//---------------------thème couleur------------
+
+  .add-to-cart-button,
+  .buy-now-button, 
+  .btn-retour, 
+  .option:hover,
+  .commander-button,
+  .button-submit,
+  .submit 
+  
+  {
+    background-color: $red-shopinsid;
+  }
+
+  .socialNet,
+  .jumbotron,
+  .suggestions,
+  .suggestions li:hover,
+  .colonne2 select,   
+  .menu-bar
+
+  {
+    background: $white-shopinsid;
+  }
+
+  .btn-retour:hover,
+  .add-to-cart-button:hover,
+  .buy-now-button:hover,
+  img.clipart,
+  .panier-item,
+  .afficheMenu, 
+  .closeMenu,
+  .button-submit:hover,
+  .submit:hover
+
+  {
+    background-color: $orange-shopinsid;
+  }
+
+  .interloc 
+
+  {
+    background-color: $lgtgray-shopinsid;
+  }
+
+  .copyright,
+  .vous 
+  
+  {
+    background-color: rgba($color: $lgtgray-shopinsid, $alpha: 0.5);
+  }
+
+  .product-price, 
+  .figcaption-img-presentation, 
+  .option,
+  .btn:hover,
+  .presentation-title,
+  .supprimer-button,
+  .ici 
+  
+  {
+    color: $red-shopinsid;
+  }
+
+  .product-price-selection,
+  .btn,
+  .prix1article,
+  .quantityN,
+  .commander-button,
+  .ici:hover
+
+  {
+    color: $orange-shopinsid;
+  }
+
+  .product-name, 
+  .option:hover,
+  .quantity:hover,
+  .figcaption-img-presentation li:hover 
+  
+  {
+    color:$black-shopinsid;
+  }
+
+  .option:hover, 
+  .price,
+  .add-to-cart-button,
+  .buy-now-button, 
+  .btn-retour,
+  .supprimer-button,
+  .commander-button,
+  .button-submit,
+  .submit
+
+  {
+    color: $white-shopinsid;
+  }
+
+  .quantity,
+  .product-description,
+  .panier-title,
+  .produit-name,
+  .produit-description,
+  .produit-price,
+  .subtotal-label,
+  .block-profil
+  
+  {
+    color: $gray-shopinsid;
+  }
+
+  .presentation-image 
+  
+  {
+    border: 1px solid $red-shopinsid;
+  }
+
+  .caption
+  
+  {
+    background-color: rgba($color: $black-shopinsid, $alpha: 0.5);
+  }
+
+  .input-connect,
+  .colonne2 select,
+  .langue, 
+  .role,
+  .input-register,
+  .search-bar,
+  .interloc, 
+  .vous
+  
+  {
+    border: 1px solid $lgtgray-shopinsid;
+  }
+
+  .presentation-image 
+  
+  {
+    box-shadow: 12px 12px 2px 1px rgba($color: $orange-shopinsid, $alpha: .3);
+  }
+
+  .presentation-image:hover
+
+  {
+    box-shadow: 12px 12px 2px 1px rgba($color: $red-shopinsid, $alpha: .3);
+  }
+
+//---------------------general------------------
+
+input {
+    outline:none;
+  }
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input::placeholder {
+  font-weight: lighter;
+  opacity: 0.5;
+}
+
+.block-profil {
+  width: 65%;
+}
+
+//-----------vu mobile--------
+
+.btMobile {
+  display: none;
+}
+
+@media (min-width: 392px) and (max-width: 800px) {
+
+  //----------------header----------
+
+  .container {
+    padding-bottom: 50px;
+  }
+
+  .hideMobile {
+    display: none;
+  }
+
+  .afficheMenu, .closeMenu {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+
+  .menu-bar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .titre-inscription, .jumbotron, 
+  .jumbotron.titre-inscription,
+  .text-center {
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .text-center {
+    margin-top: 100px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .btMobile {
+    display: block;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .menu-items {
+    position: absolute;
+    top: 90px;
+    z-index: 2;
+    right: 0;
+    margin: 0;
+    padding: 0 !important;
+    width: 100px;
+    height: 407px;
+    margin-right: 10px;
+    overflow-y: auto;
+    border-left: 1px solid $lgtgray-shopinsid;
+  }
+
+  .menu-items .btn {
+    margin-bottom: 30px;
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  .catego {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    width: 228px;
+    height: 407px;
+    margin-right: 110px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  li.option {
+    margin-left: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  .search {
+    position: absolute;
+    top: 35px;
+    right: 52px;
+    z-index: 4;
+    height: 55px;
+  }
+
+  .search-bar {
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+
+  .catego, .search, .menu-items {
+    background-color: rgba($color: $white-shopinsid, $alpha: 0.9);
+
+  }
+
+  .menu-mobile {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  //--------------footer------------
+
+  .footer, .bg-light {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  .enveloppe, .partager, .closeNetwork {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .partager, .closeNetwork {
+    left: 10px !important;
+    bottom: 0 !important;
+  }
+
+  .enveloppe {
+    right: 10px;
+    bottom: 2px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  .socialNet ul {
+    width: 100%;
+    height: 40px;
+    padding-left: 0;
+  }
+
+  .socialNet {
+    left: 0% !important;
+    z-index: 2 !important;
+    width: 100%;
+  }
+
+  .socialNet li {
+    margin: 0;
+  }
+
+  //--------------block profil-------
+
+  .block-profil {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  //--------------all-produit--------
+
+  .containeur {
+    height: 100vh !important;
+  }
+
+  .presentation-title {
+    font-size: 14px !important;
+    height: 35px !important;
+  }
+
+  .presentation-image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .box {
+    width: 200px !important;
+    height: 200px !important;
+    }
+
+    .caption {
+      top: -30px !important;
+      height: 30px !important;
+    }
+
+    .price{
+      font-size: 14px !important;
+    }
+
+    .btnpanier {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      left: 5px;
+      bottom: 5px;
+      margin: 0 !important;
+    }
+
+  //-------------produit-detail-------
+
+  .product-name {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .side-panel, .commentaire {
+    margin-left: 60px !important;
+  }
+
+  .details-container img.presentation-image {
+    width: 300px !important;
+    height: 300px !important;
+    margin-right: 0;
+  }
+
+  .side-panel, .commentaire, 
+  .h4-comment {
+    margin-top: 50px;
+  }
+
+  .figcaption-img-presentation {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+  
+  .details-container {
+    display: block !important;
+  }
+
+  .product-description, .side-panel, .commentaire {
+    width: 330px !important;
+    text-align: left;
+  }
+
+  .commentaire {
+    height: 400px !important;
+    bottom: 50px !important;
+    margin-top: 0;
+    margin-left: 0 !important;
+  }
+
+  .product-description {
+    height: 150px !important;
+  }
+
+  .add-to-cart-button,
+  .buy-now-button, .btn-retour {
+    margin-right: 25px !important;
+  }
+
+  .add-to-cart-button {
+    margin-left: 20px !important;
+  }
+
+  .block-comment {
+    width: 330px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+
+  //--------------inscription--------
+
+  .div-inscription, .allColonne, .app.inscription {
+    width: 100% !important;
+    margin: auto;
+  }
+
+  .colonne1 input, .colonne2 input, .allColonne select, input.btn.submit {
+    width: 100% !important;
+  }
+
+  input.btn.submit {
+    margin-right: 0;
+    left: 0 !important;
+  }
+  
+  .allColonne {
+    display: block !important;
+    width: 100% !important;
+    margin: auto;
+    padding: 0;
+  }
+
+  //---------------chat---------------
+
+  .chat {
+    margin-bottom: 100px !important;
+    padding: 0 !important;
+    height: 350px;
+    padding: 8px !important;
+  }
+
+  .interloc, .vous {
+    width: 300px !important;
+    font-size: 14px;
+  }
+
+  .comment-chat {
+    bottom: 0 !important;
+  }
+
+  //---------------connexion----------
+
+  .connexion {
+    width: 85% !important;
+    margin: auto;
+  }
+
+  .reset {
+    width: max-content !important;
+  }
+
+}
+
+//-----------------vue tablette-------------
+
+@media (min-width: 801px) and (max-width: 1280px) {
+
+  body {
+    padding-bottom: 100px !important;
+  }
+
+  //-------------header-------------
+
+  .container {
+    padding-bottom: 50px;
+  }
+
+  .hideMobile {
+    display: none;
+  }
+
+  .afficheMenu, .closeMenu {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+
+  .menu-bar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .titre-inscription, .jumbotron, 
+  .jumbotron.titre-inscription,
+  .text-center {
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .text-center {
+    margin-top: 100px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .btMobile {
+    display: block;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .menu-items {
+    position: absolute;
+    top: 90px;
+    z-index: 2;
+    right: 0;
+    margin: 0;
+    padding: 0 !important;
+    width: 100px;
+    height: 407px;
+    margin-right: 10px;
+    overflow-y: auto;
+    border-left: 1px solid $lgtgray-shopinsid;
+  }
+
+  .menu-items .btn {
+    margin-bottom: 30px;
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  .catego {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    width: 228px;
+    height: 407px;
+    margin-right: 110px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  li.option {
+    margin-left: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  .search {
+    position: absolute;
+    top: 35px;
+    right: 52px;
+    z-index: 4;
+    height: 55px;
+  }
+
+  .search-bar {
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+
+  .catego, .search, .menu-items {
+    background-color: rgba($color: $white-shopinsid, $alpha: 0.9);
+
+  }
+
+  .menu-mobile {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  //-------------footer-------------
+
+  .socialNet {
+    left: 0 !important;
+    margin-left: auto !important;
+    width: 100% !important;
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .partager, .closeNetwork, .enveloppe {
+    z-index: 3 !important;
+  }
+
+  .copyright {
+    margin-top: 0;
+  }
+
+  //-------------all produits-----------
+
+  .containeur {
+    height: 100vh !important;
+  }
+
+  .presentation-title {
+    font-size: 14px !important;
+    height: 50px;
+  }
+
+  .presentation-image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .box {
+    width: 200px !important;
+    height: 200px !important;
+    }
+
+    .price{
+      font-size: 16px !important;
+    }
+
+  //-------------produit details---------
+
+  .details-container {
+    width: 100% !important;
+    display: block !important;
+    margin: auto !important;
+  }
+
+  .figcaption-img-presentation {
+    margin-bottom: 40px;
+  }
+
+  .details-container img.presentation-image {
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  .product-name {
+    font-size: 24px !important;
+  }
+
+  .side-panel {
+    height: 400px !important;
+    margin-bottom: 50px;
+    margin-left: 0 !important;
+    margin-right: 0; 
+    text-align: left;
+  }
+
+  .commentaire-text {
+    margin-bottom: 0;
+  }
+
+  .side-panel, .product-description, 
+  p.commentaire-text, .commentaire  {
+    width: 100% !important;
+  }
+
+  .commentaire {
+    margin-left: 0 !important;
+  }
+
+  //--------------profil-----------
+
+  .block-profil {
+    width: 64%;
+    padding-top: 50px;
+  }
+
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+
+  body {
+    padding-bottom: 100px !important;
+  }
+
+  .titre-inscription, .jumbotron, 
+  .jumbotron.titre-inscription,
+  .text-center {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+  }
+}

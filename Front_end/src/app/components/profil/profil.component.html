@@ -1,0 +1,94 @@
+<div class="bg-transp jumbotron">
+  <h1 class="display-4">Mes informations personnelles</h1>
+  <p class="lead">Vos informations</p>
+</div>
+
+<div class="row m-3">
+  <div class="card col-md-4 text-left mr-3 d-flex p-xxl-5">
+    <div class="col">
+      <div class="h-container__right-item h-welcom "></div>
+      <div class="list-group">
+        <a routerLink="/commandes" class="list-group-item list-group-item-action">
+          <i class="bi bi-bag"></i>
+          Mes commandes
+        </a>
+        <br>
+        <a routerLink="/chats" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Chats
+        </a>
+        <br>
+        <a routerLink="/remboursement" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Mes remboursements
+        </a>
+        <br>
+        <a routerLink="/adresses" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Mes adresses
+        </a>
+        <a routerLink="/profil" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Retour Profil
+        </a>
+        <b class="m-2 text-center">Les suivis</b>
+        <a routerLink="/suiviMessages" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Suivi de vos messages
+        </a>
+        <a routerLink="/suiviCommandes" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Suivi des commandes
+        </a>
+        <a routerLink="/notificationVendeur" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Notifications vendeurs
+        </a>
+        <a routerLink="/messageVendeur" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Messages vendeurs
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-7 d-flex p-xxl-5 block-profil">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Nom:</td>
+          <td>{{ profils.nom }}</td>
+        </tr>
+        <tr>
+          <td>Prénom:</td>
+          <td>{{ profils.prenom }}</td>
+        </tr>
+        <tr>
+          <td>Téléphone:</td>
+          <td>{{ profils.tel }}</td>
+        </tr>
+        <tr>
+          <td>Adresse:</td>
+          <td>{{ profils.adresse }}</td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>{{ profils.email }}</td> <!-- Ajout de la ligne pour afficher l'email -->
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col mb-3">
+          <button type="button" class="submit m-3" (click)="redirectToPage('modifier-profil')">Modifier le profil</button>
+          <button class="btn-retour" (click)="redirectToPage('all-produit')" title="retour produit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

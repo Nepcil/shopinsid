@@ -1,0 +1,42 @@
+//.banner {
+ // background-color: blue;
+  //padding: 20px;
+  //text-align: center;
+//}
+
+h1, p {
+  color: white;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: rgb(255,255,255);
+  color: rgb(167, 167, 231);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.btn:hover {
+  background-color: lightblue;
+}
+
+.form-control{
+  padding: 5px 10px;
+  background-color: rgb(52, 119, 179);
+  color: white;
+  border-color: black;
+  width: 100px;
+  height: 30px;
+}
+option:hover{
+  background-color: white;
+  color: rgb(52, 119, 179);
+}
