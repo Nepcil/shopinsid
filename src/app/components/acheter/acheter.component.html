@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <h1 class="display-4">Passez votre commande</h1>
+    <p class="lead">Acheter un ou des produit(s) sélectionné(s)</p>
+</div>
+<br>
+<div class="panier-container">
+    <h2 class="panier-title">Produit(s)</h2>
+
+    <div *ngFor="let item of panierItems" class="panier-item-command">
+
+        <div class="panier-image" *ngIf="produit">
+            <img [src]="getImagePath(produit.imageUrl)" alt="{{ produit.name }}">
+        </div>
+
+        <div class="panier-details">
+            <h3 class="produit-name">{{ item.name }}</h3>
+            <p class="produit-price">{{ item.price }}€</p>
+            <div class="quantite-section">
+                <p for="quantite">Quantité : {{item.quantite}}</p>
+            </div>
+        </div>
+
+        <div class="priceInfo">
+            <p class="subtotal-label">total HT :</p>
+            <p class="subtotal-value">{{ item.price * item.quantite }}€</p>
+        </div>  
+
+        <div class="priceInfo">
+            <p class="subtotal-label">livraison :</p>
+            <p class="subtotal-value">{{ item.price + livraison }}€</p>
+        </div> 
+
+        <div class="priceInfoTotal">
+            <p class="subtotal-label">total TTC:</p>
+            <p class="subtotal-value">{{ item.price + tva }}€</p>
+        </div> 
+
+    </div>
+
+    <div>
+        Information CB
+    </div>
+
+    <button class="submit" (click)="acheter()">Acheter</button>
+</div>

@@ -1,0 +1,49 @@
+div {
+  width: 300px;
+  margin: 0 auto;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.input-connect, .button-submit {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.button-submit {
+  border: 0;
+}
+
+.titleConnexion, .lead {
+  text-align: center;justify-content: center;
+}
+
+.titre-inscription {
+  width: 100%;
+}
+
+.ici {
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  display: inline-block; // Ajout de cette ligne
+  margin-right: 5px; // Ajout de cette ligne pour ajouter un peu d'espace entre la case à cocher et le texte
+}
+.remember-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

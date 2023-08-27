@@ -1,0 +1,173 @@
+<div class="jumbotron">
+  <h1 class="display-4">Mes adresses</h1>
+  <p class="lead">Liste des adresses enregistrées</p>
+</div>
+
+<div class="row m-3">
+  <div class="card col-md-4 text-left mr-3 d-flex p-xxl-5">
+    <div class="col">
+      <div class="h-container__right-item h-welcom "></div>
+      <div class="list-group">
+        <a routerLink="/commandes" class="list-group-item list-group-item-action">
+          <i class="bi bi-bag"></i>
+          Mes commandes
+        </a>
+        <br>
+        <a routerLink="/chats" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Chats
+        </a>
+        <br>
+        <a routerLink="/remboursement" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Mes remboursements
+        </a>
+        <br>
+        <a routerLink="/adresses" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Mes adresses
+        </a>
+        <a routerLink="/profil" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Retour Profil
+        </a>
+        <b class="m-2 text-center">Les suivis</b>
+        <a routerLink="/suiviMessages" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Suivi de vos messages
+        </a>
+        <a routerLink="/suiviCommandes" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Suivi des commandes
+        </a>
+        <a routerLink="/notificationVendeur" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Notifications vendeurs
+        </a>
+        <a routerLink="/messageVendeur" class="list-group-item list-group-item-action">
+          <i class="bi bi-cart-fill"></i>
+          Messages vendeurs
+        </a>
+      </div>
+    </div>
+  </div>
+
+<div class="card col-md-7 d-flex block-profil">
+  <form>
+    <fieldset>
+
+      <div class="col ">
+        <div class="form-group">
+          <label for="adresse-facturation">Adresse de facturation</label>
+          <input type="text" class="form-control" id="adresse-facturation" placeholder="Adresse">
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1"> définir comme principal &nbsp;
+            <span title="choisir cette adresse comme adresse de livraison par default">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="adresse">adresse actuelle</label>
+          <input type="adresse" class="form-control" id="adresse" placeholder="Adresse">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="nom">Entrez votre nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Nom">
+        </div>
+
+        <div class="form-group">
+          <label for="prenom">Entrez votre prenom</label>
+          <input type="text" class="form-control" id="prenom" placeholder="Prenom">
+        </div>
+
+        <div class="form-group">
+          <label for="civilite">Civilité</label>
+          <select class="form-control" id="civilite">
+            <option>Monsieur</option>
+            <option>Madame</option>
+            <option>Mademoiselle</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="Batiment">Batiment</label>
+          <input type="adresse" class="form-control" id="batiment" placeholder="Exemple : Bat A ...">
+        </div>
+
+        <div class="form-group">
+          <label for="appart">Appartement</label>
+          <input type="adresse" class="form-control" id="appart" placeholder="Exemple : Appart 205 ...">
+        </div>
+
+        <div class="form-group">
+          <label for="complemnt">Complément d'adresse</label>&nbsp;
+          <span title="Digicode etc...">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+            </svg>
+          </span>
+          <input type="adresse" class="form-control" id="complement" placeholder="Infos complémentaire pour l'accès au lieu">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="bp">BP / Lieu-dit</label>
+          <input type="adresse" class="form-control" id="bp" placeholder="Boite postale / Lieu-dit">
+        </div>
+
+        <div class="form-group">
+          <label for="cp">Code Postal</label>
+          <input type="adresse" class="form-control" id="cp" placeholder="75000">
+        </div>
+        
+        <div class="form-group">
+          <label for="ville">Ville</label>
+          <input type="adresse" class="form-control" id="ville" placeholder="Paris">
+        </div>
+      </div>
+
+      <div class="col">
+
+        <div class="form-group">
+          <label for="pays">Pays</label>
+          <input type="adresse" class="form-control" id="pays" placeholder="France">
+        </div>
+
+        <div class="form-group">
+          <label for="adresse">Nom de société &nbsp;
+            <span title="Livraison sur votre lieu de travail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+              </svg>
+            </span>
+          </label>
+          <input type="adresse" class="form-control" id="adresse" placeholder="Nom de votre société">
+        </div>
+
+        <div class="form-group">
+          <label for="tel">Entrez votre téléphone</label>
+          <input type="tel" class="form-control" id="tel" placeholder="Téléphone">
+        </div>
+      </div>
+
+      <div class="col">
+        <button type="submit" class="submit mr-3">Enregistrer</button>
+        <button type="button" class="btn-retour ml-3" (click)="redirectToPage('profil')">Annuler</button>
+      </div>
+  
+    </fieldset>
+  </form>
+</div>

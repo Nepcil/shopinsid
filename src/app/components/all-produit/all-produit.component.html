@@ -1,0 +1,9 @@
+<div>
+  <h1 class="text-center">Vos Articles {{ categorieSelectionnee }}</h1>
+</div>
+<!-- Affichage des produits-->
+<div class="containeur">
+  <div class="box" *ngFor="let produit of produits">
+    <app-produit-compact [produit]="produit"></app-produit-compact>
+  </div>
+</div>

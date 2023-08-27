@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <h1 class="text-center display-4">Inscription</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="register()" class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" formControlName="nom" class="form-control"
+              [ngClass]="{ 'is-invalid': f['nom'].errors && (f['nom'].dirty || f['nom'].touched) }">
+            <div *ngIf="f['nom'].errors && (f['nom'].dirty || f['nom'].touched)" class="invalid-feedback">
+              <div *ngIf="f['nom'].errors['required']">Le nom est requis.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" formControlName="prenom" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" formControlName="password" class="form-control"
+              [ngClass]="{ 'is-invalid': f['password'].errors && (f['password'].dirty || f['password'].touched) }">
+            <div *ngIf="f['password'].errors && (f['password'].dirty || f['password'].touched)"
+              class="invalid-feedback">
+              <div *ngIf="f['password'].errors['required']">Le mot de passe est requis.</div>
+              <div *ngIf="f['password'].errors['minlength']">Le mot de passe doit avoir au moins 8 caractères.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm">Confirmer le mot de passe</label>
+            <input type="password" id="confirm" formControlName="confirm" class="form-control"
+              [ngClass]="{ 'is-invalid': registerForm.errors && (f['confirm'].dirty || f['confirm'].touched) }">
+            <div *ngIf="registerForm.errors && (f['confirm'].dirty || f['confirm'].touched)" class="invalid-feedback">
+              <div *ngIf="registerForm.errors['mismatch']">Les mots de passe ne correspondent pas.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="birthdate">Date de naissance</label>
+            <input type="date" id="birthdate" formControlName="birthdate" class="form-control"
+              [ngClass]="{ 'is-invalid': f['birthdate'].errors && (f['birthdate'].dirty || f['birthdate'].touched) }">
+            <div *ngIf="f['birthdate'].errors && (f['birthdate'].dirty || f['birthdate'].touched)"
+              class="invalid-feedback">
+              <div *ngIf="f['birthdate'].errors['required']">La date de naissance est requise.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control"
+              [ngClass]="{ 'is-invalid': f['email'].errors && (f['email'].dirty || f['email'].touched) }">
+            <div *ngIf="f['email'].errors && (f['email'].dirty || f['email'].touched)" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">L'email est requis.</div>
+              <div *ngIf="f['email'].errors['email']">L'email doit être une adresse email valide.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" formControlName="tel" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" id="adresse" formControlName="adresse" class="form-control"
+              [ngClass]="{ 'is-invalid': f['adresse'].errors && (f['adresse'].dirty || f['adresse'].touched) }">
+            <div *ngIf="f['adresse'].errors && (f['adresse'].dirty || f['adresse'].touched)" class="invalid-feedback">
+              <div *ngIf="f['adresse'].errors['required']">L'adresse est requise.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="languePreferee">Langue préférée</label>
+            <select id="languePreferee" formControlName="languePreferee" class="form-control"
+              [ngClass]="{ 'is-invalid': f['languePreferee'].errors && (f['languePreferee'].dirty || f['languePreferee'].touched) }">
+              <option value="">Sélectionnez une langue</option>
+              <option value="français">Français</option>
+              <option value="anglais">Anglais</option>
+              <option value="espagnol">Espagnol</option>
+            </select>
+            <div *ngIf="f['languePreferee'].errors && (f['languePreferee'].dirty || f['languePreferee'].touched)"
+              class="invalid-feedback">
+              <div *ngIf="f['languePreferee'].errors['required']">La langue préférée est requise.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Rôle</label>
+            <select id="role" formControlName="role" class="form-control"
+              [ngClass]="{ 'is-invalid': f['role'].errors && (f['role'].dirty || f['role'].touched) }">
+              <option value="user">Particulier</option>
+              <option value="admin">Professionnel</option>
+            </select>
+            <div *ngIf="f['role'].errors && (f['role'].dirty || f['role'].touched)" class="invalid-feedback">
+              <div *ngIf="f['role'].errors['required']">Le rôle est requis.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-center">
+          <input class="submit" type="submit" value="S'inscrire">
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
